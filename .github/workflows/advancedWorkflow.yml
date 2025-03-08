@@ -1,0 +1,22 @@
+name: firdt workflow
+
+
+on:
+  workflow_dispatch:
+
+jobs:
+  firstjob:
+    runs-on: self-hosted
+    steps:
+      - name: firstscript
+        shell: bash
+        run: echo heloworld
+      - name: checkout
+        uses: actions/checkout@v4.2.2
+      
+  sccondjob:
+    runs-on: ubuntu-latest
+    steps:
+      - name: secondscript
+        shell: bash
+        run: echo heloworld!
